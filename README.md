@@ -2,6 +2,10 @@
 
 A modular MCP server for searching flights using the Duffel API. Built for extensibility, maintainability, and clarity.
 
+## Step-by-Step Tutorial
+
+If you want a guided walkthrough on how this server was created from scratch, check out the [Step-by-Step Tutorial](step-by-step-tutorial.md).
+
 ## Features
 - Search for flights between any two airports using the Duffel API
 - Granular, well-documented codebase with clear separation of concerns
