@@ -49,6 +49,7 @@ MCP CLI is a tool included in the MCP SDK that helps MCP server development
 
 3. **Provide context for the Duffle travel API as that is the API we will be using to get relevant travel information like available flights**
    - https://duffel.com/ 
+   - The endpoint I am using in this example is described at https://duffel.com/docs/api/v2/offers
 
 4. **Update our project with cursor rules**
    - Give Cursor Rules in order to make it mimic as best as possible an "expert" software engineer
