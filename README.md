@@ -30,14 +30,14 @@ travelserver/
 
 ## Setup
 1. **Clone the repository**
-2. **Create and activate a virtual environment:**
+2. **Create and activate a virtual environment with uv:**
    ```bash
-   python -m venv .venv
+   uv venv
    source .venv/bin/activate
    ```
-3. **Install dependencies:**
+3. **Install dependencies with uv:**
    ```bash
-   pip install -e .
+   uv pip install -e .
    ```
 4. **Create a `.env` file in the project root:**
    ```
