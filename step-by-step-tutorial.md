@@ -8,6 +8,11 @@ We will be using uv (https://docs.astral.sh/uv/) which is an extremely fast Pyth
 
 uv is a cutting-edge Python package and project manager built with Rust, aims to change that. Combining the functionality of tools like pip, poetry, and virtualenv, uv streamlines tasks like dependency management, script execution, and project building—all with exceptional performance. Its seamless compatibility with pip commands, requiring no additional learning curve.
 
+#### Install UV
+```bash
+brew install uv
+```
+
 #### Initialize the project with UV
 ```bash
 uv init travelserver
@@ -120,3 +125,18 @@ uv run server.py
 ## Section 4: Integrate MCP Server into Claude Desktop Client
 1. Claude Desktop > Settings > Developer > Edit Config
 2. Open claude_desktop_config.json
+```json
+{
+  "mcpServers": {
+    "travel-server": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "--directory",
+        "/Users/jidehen/Documents/Projects/mcp-servers/travelserver",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
+```
