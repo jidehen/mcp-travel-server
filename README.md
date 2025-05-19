@@ -30,6 +30,11 @@ travelserver/
 
 ## Setup
 1. **Clone the repository**
+```bash
+git clone https://github.com/kidehen/mcp-travel-server.git
+cd mcp-travel-server
+```
+
 2. **Create and activate a virtual environment with uv:**
    ```bash
    uv venv
@@ -44,20 +49,28 @@ travelserver/
    DUFFEL_ACCESS_TOKEN=your_duffel_api_key_here
    ```
 
-## Running the Server
-Run the server using [uv](https://astral.sh/uv/):
-```bash
-uv run main.py
-```
-
 ## Usage
 - The MCP server exposes a `get_flights` tool for searching flights.
-- You can connect this server to an MCP-compatible client (e.g., Claude Desktop).
 - When a user asks about flights, the client will call the `get_flights` tool with the appropriate parameters.
 - The server returns a list of flight offers and a detailed debug log for troubleshooting.
 
-## Environment Variables
-- `DUFFEL_ACCESS_TOKEN`: Your Duffel API key (required, set in `.env`)
+### MCP Inspector using NPX 
+```bash
+npx @modelcontextprotocol/inspector uv --directory /path/to/mcp-travel-server run main.py
+```
+
+### Claude Desktop MCP Server Configuration 
+```json
+    "mcp-travel-server": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/mcp-travel-server",
+        "run",
+        "main.py"
+      ]
+    }
+```
 
 ## Extending the Project
 - Add new models to `models/` (one per file)
