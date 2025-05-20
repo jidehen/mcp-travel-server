@@ -30,16 +30,20 @@ travelserver/
 
 ## Setup
 1. **Clone the repository**
+   ```bash
+   git clone https://github.com/kidehen/mcp-travel-server.git
+   cd mcp-travel-server
+   ```
 2. **Create and activate a virtual environment with uv:**
    ```bash
    uv venv
    source .venv/bin/activate
    ```
-3. **Install dependencies with uv:**
+4. **Install dependencies with uv:**
    ```bash
    uv pip install -e .
    ```
-4. **Create a `.env` file in the project root:**
+5. **Create a `.env` file in the project root:**
    ```
    DUFFEL_ACCESS_TOKEN=your_duffel_api_key_here
    ```
@@ -48,6 +52,23 @@ travelserver/
 Run the server using [uv](https://astral.sh/uv/):
 ```bash
 uv run main.py
+```
+
+### Claude Desktop MCP Server Configuration 
+```json
+{
+  "mcpServers": {
+    "travel-server": {
+      "command": "/opt/homebrew/bin/uv",
+      "args": [
+        "--directory",
+        "/Users/jidehen/Documents/Projects/mcp-servers/travelserver",
+        "run",
+        "main.py"
+      ]
+    }
+  }
+}
 ```
 
 ## Usage
