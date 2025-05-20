@@ -103,9 +103,6 @@ Example response:
 ]
 ```
 
-## Demo Video
-https://github.com/user-attachments/assets/7b8b1c74-7839-43a1-b4b1-f511cc6cbe4b
-
 
 
 
